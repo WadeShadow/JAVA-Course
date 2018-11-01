@@ -1,7 +1,7 @@
 package VectorPackage;
 
 public class Vector3d {
-    public double[] coordinates = new double[3];
+    private double[] coordinates = new double[3];
 
     public Vector3d(double c1, double c2, double c3){
         this.coordinates[0]=c1;
