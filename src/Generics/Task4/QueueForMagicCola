@@ -1,0 +1,23 @@
+public static void showQueueByBottles(int bottlesNum){
+        ArrayBlockingQueue<String> queue = new ArrayBlockingQueue<>(4+bottlesNum);
+       try{
+
+           queue.put("Volovitc");
+           queue.put("Kutrapalli");
+           queue.put("Penny");
+           queue.put("Sheldon");
+           String currentPerson;
+           while(bottlesNum>0) {
+               currentPerson = queue.poll();
+               queue.put(currentPerson);
+               queue.put(currentPerson);
+               bottlesNum--;
+           }
+
+       }catch(InterruptedException ex){
+           System.out.println(ex);
+       }
+
+        System.out.println(queue);
+
+    }
